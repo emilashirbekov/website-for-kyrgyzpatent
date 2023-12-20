@@ -1,0 +1,56 @@
+.contacts {
+  @apply mb-16 flex flex-col justify-center items-center text-center;
+  &__body {
+    @apply pb-4 px-4 mx-auto max-w-screen-xl lg:pb-16 lg:px-6;
+  }
+  &__info {
+    @apply mx-auto max-w-screen-sm text-center mb-8 lg:mb-16;
+    &__title {
+      @apply mb-4 text-4xl text-text font-extrabold;
+    }
+    &__desc {
+      @apply font-light text-gray lg:mb-16 sm:text-xl dark:text-gray;
+    }
+  }
+  &__list {
+    @apply grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 lg:grid-cols-3 text-left;
+  }
+  &__nav {
+    @apply text-xl flex justify-between items-center;
+
+    &__item {
+      transition: all 0.2s ease;
+
+      &:hover {
+        @apply text-tertiary;
+      }
+
+      &:first-child {
+        &:hover,
+        &:active {
+          @apply text-tertiary;
+        }
+      }
+    }
+  }
+}
+
+.employee {
+  @apply items-center bg-white rounded-lg shadow sm:flex;
+
+  &__img {
+    @apply w-full rounded-lg sm:rounded-none sm:rounded-l-lg;
+  }
+  &__info {
+    @apply p-5;
+  }
+  &__name {
+    @apply text-[16px] font-bold tracking-tight text-text;
+  }
+  &__position {
+    @apply text-[14px] font-bold tracking-tight text-text;
+  }
+  &__rest {
+    @apply mt-3 mb-4 font-light text-text;
+  }
+}

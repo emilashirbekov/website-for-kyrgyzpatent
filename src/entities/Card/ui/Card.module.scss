@@ -1,0 +1,10 @@
+.card {
+  @apply max-w-[220px] bg-white border border-gray bg-transparent border-none;
+
+  &__text {
+    @apply mb-2 text-base  tracking-tight text-black;
+  }
+  &__date {
+    @apply text-xs text-gray;
+  }
+}

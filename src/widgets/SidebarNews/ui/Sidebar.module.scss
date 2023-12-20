@@ -1,0 +1,22 @@
+.sibebar {
+  &__news {
+    @apply max-w-sm;
+  }
+  @apply border-b border-solid border-b-neutral-600 mb-3;
+  &__news__item {
+    @apply flex justify-center items-center gap-6;
+  }
+}
+
+.time {
+  @apply text-xs;
+}
+.text {
+  @apply text-base;
+}
+
+@media screen and (max-width: 1025px) {
+  .sibebar {
+    display: none;
+  }
+}

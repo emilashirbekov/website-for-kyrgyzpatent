@@ -1,0 +1,21 @@
+.main {
+  @apply mb-16;
+  &__body {
+    @apply flex justify-center items-center flex-col;
+  }
+  @apply flex justify-center gap-0 xl:gap-20;
+  &__news {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4  mb-[70px];
+  }
+
+  &__button {
+    @apply py-[14px] px-[20px] text-white rounded-md cursor-pointer;
+    border: 2px solid #0087ab;
+    background: #0072bd;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.18);
+    &:hover {
+      transition: all 0.2s ease;
+      background: #078de6;
+    }
+  }
+}

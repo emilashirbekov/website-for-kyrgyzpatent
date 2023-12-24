@@ -1,8 +1,8 @@
 .card {
-  @apply max-w-[220px] bg-white border border-gray bg-transparent border-none;
+  @apply max-w-[220px] bg-white border  bg-transparent border-none;
 
   &__text {
-    @apply mb-2 text-base  tracking-tight text-black;
+    @apply mb-2 text-base  tracking-tight text-blue;
   }
   &__date {
     @apply text-xs text-gray;

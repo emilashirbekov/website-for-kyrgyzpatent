@@ -27,7 +27,7 @@ export const Card = React.memo((props: CardProps) => {
             alt={alt || ""}
           />
         </Link>
-        <div className='p-5'>
+        <div className='pt-5'>
           <Link href='#'>
             <p className={cls.card__text}>{text}</p>
             <p className={cls.card__date}>{date}</p>

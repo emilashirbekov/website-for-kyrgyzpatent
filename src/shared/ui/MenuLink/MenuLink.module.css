@@ -1,0 +1,7 @@
+.container {
+  @apply text-gray py-5 px-2 pl-0 flex items-center gap-3 mx-0 my-1 rounded-xl;
+}
+
+.container:hover {
+  @apply text-blue transition-all ease-in;
+}

@@ -1,4 +1,13 @@
 import { CardData, Employee, FooterItem, NavbarItem } from "../types/types";
+import {
+  MdDashboard,
+  MdHome,
+  MdWarning,
+  MdAssignmentInd,
+  MdInsertDriveFile,
+  MdGroup,
+  MdArchive,
+} from "react-icons/md";
 
 export const footerItems: FooterItem[] = [
   {
@@ -24,14 +33,14 @@ export const footerItems: FooterItem[] = [
   },
 ];
 
-export const navItems: NavbarItem[] = [
-  { href: "/", label: "Лента новостей" },
-  { href: "/about", label: "Наша жизнь" },
-  { href: "/contacts", label: "Контакты" },
-  { href: "", label: "Обьявления" },
-  { href: "", label: "Информационные ресурсы" },
-  { href: "", label: "Рабочая группа" },
-  { href: "", label: "Файловый архив" },
+export const menuItems: NavbarItem[] = [
+  { href: "/dashboard", label: "Лента новостей", icon: MdHome() },
+  { href: "/dashboard/about", label: "Наша жизнь", icon: MdDashboard() },
+  { href: "/dashboard/contacts", label: "Контакты", icon: MdAssignmentInd() },
+  { href: "", label: "Обьявления", icon: MdWarning() },
+  { href: "", label: "Информационные ресурсы", icon: MdInsertDriveFile() },
+  { href: "", label: "Рабочая группа", icon: MdGroup() },
+  { href: "", label: "Файловый архив", icon: MdArchive() },
 ];
 
 export const news: CardData[] = [

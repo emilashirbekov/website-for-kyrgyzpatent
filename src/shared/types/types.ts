@@ -10,6 +10,7 @@ export interface FooterItem {
 export interface NavbarItem {
   href: string;
   label: string;
+  icon: string;
 }
 
 export interface LangSwitcherProps {

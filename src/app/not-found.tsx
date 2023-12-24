@@ -14,9 +14,9 @@ const NotFound = () => {
         <p className='text-lg md:text-xl lg:text-2xl text-gray-500 my-12'>
           Sorry, the page you are looking for could not be found.
         </p>
-        <a
-          href='#'
-          className='flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 rounded transition duration-150'
+        <Link
+          href='/dashboard'
+          className='flex items-center text-white space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 rounded transition duration-150'
           title='Return Home'
         >
           <svg
@@ -31,10 +31,8 @@ const NotFound = () => {
               clip-rule='evenodd'
             ></path>
           </svg>
-          <Link href='/' className='text-primary'>
-            Return Home
-          </Link>
-        </a>
+          Return Home
+        </Link>
       </div>
     </div>
   );

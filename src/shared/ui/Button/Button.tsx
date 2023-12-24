@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, ReactNode } from "react";
-import cls from "./Button.module.scss";
+import cls from "./Button.module.css";
 import { classNames } from "../../lib/classNames";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

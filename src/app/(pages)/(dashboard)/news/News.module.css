@@ -1,0 +1,31 @@
+.news {
+	@apply mt-5;
+}
+
+.actions {
+	@apply flex justify-between items-center px-5 mb-5;
+}
+
+.title {
+	@apply text-blue mb-5 text-2xl;
+}
+
+.add {
+	@apply bg-blue rounded text-primary p-2 transition-all duration-300 ease-linear hover:bg-slate-700;
+}
+
+.news__list {
+	background: #fff;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+	justify-items: center;
+	border-radius: 12px;
+}
+
+.news__list img {
+	@apply rounded-xl w-full;
+}
+
+.news__item {
+	@apply bg-primary p-5 rounded-xl;
+}

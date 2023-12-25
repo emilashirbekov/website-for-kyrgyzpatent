@@ -1,0 +1,28 @@
+.container {
+	@apply bg-primary p-5 rounded-2xl mt-5 h-full;
+}
+
+.form {
+	@apply flex flex-wrap justify-between;
+}
+
+.form input {
+	@apply mt-2 p-3 flex h-12 w-full items-center justify-center rounded-xl border text-sm outline-none;
+}
+
+.textarea {
+	@apply border-none outline-none p-2;
+}
+
+.form input,
+.form select {
+	@apply w-[45%];
+}
+
+.form textarea {
+	@apply w-full;
+}
+
+.form button {
+	@apply mt-2 w-full rounded-xl bg-blue py-[12px] text-base font-medium text-white transition duration-200;
+}

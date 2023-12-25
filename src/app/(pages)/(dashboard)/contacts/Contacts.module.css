@@ -1,0 +1,19 @@
+.container {
+	@apply mt-5;
+}
+
+.employees {
+	padding: 20px;
+	background: #fff;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+	justify-items: center;
+	border-radius: 12px;
+	gap: 20px;
+}
+
+.employees__img {
+	width: 100% !important;
+	height: 300px !important;
+	object-fit: cover;
+}

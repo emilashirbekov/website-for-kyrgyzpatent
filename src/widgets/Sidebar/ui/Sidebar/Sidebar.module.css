@@ -1,11 +1,11 @@
 .container {
-  @apply p-5 lg:p-9 bg-primary transition-all  absolute z-50 w-auto transform translate-x-[-100%] lg:relative lg:z-0 lg:transform-none;
+	@apply p-5 lg:p-9 bg-primary transition-all duration-500 ease-linear  absolute z-50 w-auto transform translate-x-[-100%] lg:relative lg:z-0 lg:transform-none h-full;
 }
 
 .open {
-  @apply w-[100%] p-5 lg:p-9 bg-primary transition-all  absolute transform translate-x-[0%] z-10 md:w-auto md:h-[100vh];
+	@apply w-[100%] p-5 lg:p-9 bg-primary transition-all duration-500 ease-linear  absolute transform translate-x-[0%] z-10 md:w-auto md:h-[100vh];
 }
 
 .logout {
-  @apply py-5 flex items-center gap-3 cursor-pointer rounded-xl bg-none border-none  w-full;
+	@apply py-5 flex items-center gap-3 cursor-pointer rounded-xl bg-none border-none  w-full;
 }

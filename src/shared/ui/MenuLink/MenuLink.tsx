@@ -1,21 +1,23 @@
-import React from "react";
-import cls from "./MenuLink.module.css";
-import Link from "next/link";
+import { AppRoutesProps } from '@/shared/config/routeConfig'
+import Link from 'next/link'
+import React from 'react'
+import cls from './MenuLink.module.css'
 
 interface MenuLinkProps {
-  href: string;
-  label: string;
-  icon: string;
+	href: string | AppRoutesProps
+	label: string
+	icon: string
 }
 
-const MenuLink = (item: MenuLinkProps) => {
-  const { href, label, icon } = item;
-  return (
-    <Link href={href} className={`${cls.container}`}>
-      <span className='text-xl'> {icon}</span>
-      <span>{label}</span>
-    </Link>
-  );
-};
+const MenuLink: React.FC<MenuLinkProps> = ({ href, label, icon }) => {
+	const linkHref = typeof href === 'string' ? href : href.path || '/'
 
-export default MenuLink;
+	return (
+		<Link href={linkHref} className={`${cls.container}`}>
+			<span className='text-xl'>{icon}</span>
+			<span>{label}</span>
+		</Link>
+	)
+}
+
+export default MenuLink

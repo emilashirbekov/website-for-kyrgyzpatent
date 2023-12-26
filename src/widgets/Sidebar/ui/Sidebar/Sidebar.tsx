@@ -15,13 +15,13 @@ export const Sidebar = () => {
 		router.push('/auth')
 	}
 	return (
-		<div className={`${isMenuOpen ? cls.open : cls.container}`}>
+		<aside className={`${isMenuOpen ? cls.open : cls.container}`}>
 			<SidebarProfile />
 			<SidebarItem />
 			<Button onClick={handleClick} className={cls.logout}>
 				<MdLogout /> Выйти
 			</Button>
-		</div>
+		</aside>
 	)
 }
 

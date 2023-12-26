@@ -1,24 +1,28 @@
 'use client'
+import useInput from '@/shared/hooks/useInput/useInput'
+import Button from '@/shared/ui/Button/Button'
+import Input from '@/shared/ui/Input/Input'
 import { useRouter } from 'next/navigation'
-import React, { ChangeEvent, FormEvent } from 'react'
+import { FormEvent } from 'react'
 import cls from './LoginForm.module.css'
 
 const LoginForm = () => {
 	const router = useRouter()
-	const [user, setUser] = React.useState({
-		email: '',
-		password: '',
+	const { values, error, onChange, setError } = useInput({
+		initialValues: {
+			email: '',
+			password: '',
+		},
 	})
-
-	const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-		const { name, value } = e.target
-		setUser(prevUser => ({ ...prevUser, [name]: value }))
-	}
-
 	const onSubmit = (e: FormEvent) => {
 		e.preventDefault()
-		localStorage.setItem('user', JSON.stringify(user))
-		router.push('/')
+		if (values) {
+			setError(false)
+			localStorage.setItem('user', JSON.stringify(values))
+			router.push('/')
+		} else {
+			setError(true)
+		}
 	}
 
 	return (
@@ -27,10 +31,11 @@ const LoginForm = () => {
 				<h1 className={cls.title}>Войдите в свой аккаунт</h1>
 				<form className={cls.form} onSubmit={onSubmit}>
 					<div>
-						<label htmlFor='email'>Введите почту</label>
-						<input
-							value={user.email}
-							onChange={onChange}
+						<Input
+							error={error}
+							label='Введите почту'
+							value={values.email}
+							onChange={onChange('email')}
 							type='email'
 							name='email'
 							id='email'
@@ -39,10 +44,11 @@ const LoginForm = () => {
 						/>
 					</div>
 					<div>
-						<label htmlFor='password'>Введите пароль</label>
-						<input
-							value={user.password}
-							onChange={onChange}
+						<Input
+							error={error}
+							label='Введите пароль'
+							value={values.password}
+							onChange={onChange('password')}
 							type='password'
 							name='password'
 							id='password'
@@ -50,7 +56,7 @@ const LoginForm = () => {
 							required={true}
 						/>
 					</div>
-					<button type='submit'>Войти</button>
+					<Button type='submit'>Войти</Button>
 				</form>
 			</div>
 		</div>

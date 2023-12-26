@@ -1,8 +1,10 @@
-import { employees } from '@/shared/constants/constants'
+import { getEmployee } from '@/shared/lib/data'
 import Image from 'next/image'
 import cls from './Contacts.module.css'
 
-const Contacts = () => {
+const Contacts = async () => {
+	const employees = await getEmployee()
+
 	return (
 		<section className={cls.container}>
 			<div className={cls.employees}>

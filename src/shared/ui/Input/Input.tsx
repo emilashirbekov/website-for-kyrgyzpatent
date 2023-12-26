@@ -11,7 +11,7 @@ const Input = ({ label, error, ...rest }: InputProps) => {
 		<div className={cls.inputWrapper}>
 			<label> {label}</label>
 			<input {...rest} />
-			{error && <p className='text-red text-xl'>Заполните поле !</p>}
+			{error && <p className='text-red text-md mt-2'>Заполните поле !</p>}
 		</div>
 	)
 }

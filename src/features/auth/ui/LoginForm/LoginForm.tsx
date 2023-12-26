@@ -16,7 +16,7 @@ const LoginForm = () => {
 	})
 	const onSubmit = (e: FormEvent) => {
 		e.preventDefault()
-		if (values) {
+		if (values.email.trim() !== '' && values.password.trim() !== '') {
 			setError(false)
 			localStorage.setItem('user', JSON.stringify(values))
 			router.push('/')
@@ -40,7 +40,6 @@ const LoginForm = () => {
 							name='email'
 							id='email'
 							placeholder='name@company.com'
-							required={true}
 						/>
 					</div>
 					<div>
@@ -53,7 +52,6 @@ const LoginForm = () => {
 							name='password'
 							id='password'
 							placeholder='••••••••'
-							required={true}
 						/>
 					</div>
 					<Button type='submit'>Войти</Button>

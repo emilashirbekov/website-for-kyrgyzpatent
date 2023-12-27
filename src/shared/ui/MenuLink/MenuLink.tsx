@@ -10,7 +10,7 @@ interface MenuLinkProps {
 }
 
 const MenuLink: React.FC<MenuLinkProps> = ({ href, label, icon }) => {
-	const linkHref = typeof href === 'string' ? href : href.path || '/'
+	const linkHref = typeof href === 'string' ? href : (href && href.path) || '/'
 
 	return (
 		<Link href={linkHref} className={`${cls.container}`}>

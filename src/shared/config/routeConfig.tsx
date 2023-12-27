@@ -6,19 +6,17 @@ export type AppRoutesProps = {
 export enum Routes {
 	MAIN = 'main',
 	ABOUT = 'about',
-	CONTACTS = 'contacts',
+	EMPLOYEES = 'employees',
 	ANNOUNCEMENTS = 'announcements',
 	RECOURSES = 'recourses',
-	NOT_FOUND = 'notfound',
 }
 
 export const RoutePath: Record<Routes, string> = {
 	[Routes.MAIN]: '/',
 	[Routes.ABOUT]: '/about',
-	[Routes.CONTACTS]: '/contacts',
+	[Routes.EMPLOYEES]: '/employees',
 	[Routes.ANNOUNCEMENTS]: '/announcements',
 	[Routes.RECOURSES]: '/recourses',
-	[Routes.NOT_FOUND]: '/notfound',
 }
 export const routeConfig: Record<Routes, AppRoutesProps> = {
 	[Routes.MAIN]: {
@@ -27,16 +25,13 @@ export const routeConfig: Record<Routes, AppRoutesProps> = {
 	[Routes.ABOUT]: {
 		path: RoutePath.about,
 	},
-	[Routes.CONTACTS]: {
-		path: RoutePath.contacts,
+	[Routes.EMPLOYEES]: {
+		path: RoutePath.employees,
 	},
 	[Routes.ANNOUNCEMENTS]: {
 		path: RoutePath.announcements,
 	},
 	[Routes.RECOURSES]: {
 		path: RoutePath.recourses,
-	},
-	[Routes.NOT_FOUND]: {
-		path: RoutePath.notfound,
 	},
 }

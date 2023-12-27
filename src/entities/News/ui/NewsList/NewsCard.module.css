@@ -1,0 +1,24 @@
+.news__list {
+	background: #fff;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+	justify-items: center;
+	border-radius: 12px;
+}
+
+.news__list img {
+	@apply rounded-xl w-full;
+}
+
+.news__item {
+	@apply bg-primary p-5 rounded-xl;
+}
+.card {
+	@apply max-w-[250px] bg-white border  bg-transparent border-none;
+}
+.card__text {
+	@apply mb-2 text-base  tracking-tight text-blue;
+}
+.card__date {
+	@apply text-xs text-gray;
+}

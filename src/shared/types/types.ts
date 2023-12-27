@@ -26,13 +26,3 @@ export interface CardData {
 	text: string
 	date: string
 }
-
-export interface Employee {
-	id: number
-	photo: string
-	fullName: string
-	department: string
-	position: string
-	phoneNumber: string
-	email: string
-}

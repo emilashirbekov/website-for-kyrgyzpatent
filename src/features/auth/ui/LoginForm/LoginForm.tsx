@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { FormEvent } from 'react'
 import cls from './LoginForm.module.css'
 
-const LoginForm = () => {
+export const LoginForm = () => {
 	const router = useRouter()
 	const { values, error, onChange, setError } = useInput({
 		initialValues: {
@@ -18,8 +18,6 @@ const LoginForm = () => {
 		e.preventDefault()
 		if (values.email.trim() !== '' && values.password.trim() !== '') {
 			setError(false)
-			localStorage.setItem('user', JSON.stringify(values))
-			router.push('/')
 		} else {
 			setError(true)
 		}
@@ -60,5 +58,3 @@ const LoginForm = () => {
 		</div>
 	)
 }
-
-export default LoginForm

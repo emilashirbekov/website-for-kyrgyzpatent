@@ -1,9 +1,9 @@
-import LoginForm from '@/features/auth/ui/LoginForm/LoginForm'
+import { LoginForm } from '@/features/auth'
 import logo from '@/shared/assets/icons/logo.svg'
 import Image from 'next/image'
 import cls from './Login.module.css'
 
-const Login = () => {
+export const Login = () => {
 	return (
 		<section className={cls.login}>
 			<div className={cls.container}>
@@ -19,5 +19,3 @@ const Login = () => {
 		</section>
 	)
 }
-
-export default Login

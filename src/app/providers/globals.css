@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-secondary;
+	@apply bg-secondary;
 }
 
 a {
-  @apply text-blue;
+	@apply text-blue;
 }

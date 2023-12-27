@@ -14,4 +14,4 @@ const employeeSchema = new mongoose.Schema(
 )
 
 export const Employee =
-	mongoose.models.Employee || mongoose.model('Employee', employeeSchema)
+	mongoose.models.employee || mongoose.model('employee', employeeSchema)

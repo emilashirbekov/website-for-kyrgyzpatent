@@ -1,22 +1,18 @@
 import mongoose from 'mongoose'
 
-interface ConnectionStatus {
-	isConnected: number
-}
+const connection = {}
 
-let connection: ConnectionStatus = { isConnected: 0 }
-
-export const connectToDB = async (): Promise<void> => {
+export const connectToDB = async () => {
 	try {
-		if (connection.isConnected === 0) {
-			if (!process.env.MONGO) {
-				throw new Error('MONGO environment variable is not defined')
-			}
-
-			const db = await mongoose.connect(process.env.MONGO)
-			connection.isConnected = db.connection.readyState
-		}
+		//@ts-ignore
+		if (connection.isConnected) return
+		//@ts-ignore
+		const db = await mongoose.connect(process.env.MONGO)
+		//@ts-ignore
+		connection.isConnected = db.connections[0].readyState
 	} catch (error) {
-		throw new Error('Error connecting to the database')
+		console.log(error)
+		//@ts-ignore
+		throw new Error(error)
 	}
 }

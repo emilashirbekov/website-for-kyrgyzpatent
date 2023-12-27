@@ -1,8 +1,11 @@
-import { Card } from '@/entities/Card'
-import { news } from '@/shared/constants/constants'
+import { NewsList } from '@/entities/News'
 import Link from 'next/link'
+import React from 'react'
 import cls from './News.module.css'
-const News = () => {
+import { getNews } from './model/services/fetchNews'
+import { NewsData } from './model/types/news'
+const News: React.FC = async () => {
+	const news: NewsData[] = await getNews()
 	return (
 		<section className={cls.news}>
 			<div className={cls.actions}>
@@ -11,13 +14,7 @@ const News = () => {
 					Добавить новость
 				</Link>
 			</div>
-			<ul className={cls.news__list}>
-				{news.map(el => (
-					<li key={el.id} className={cls.news__item}>
-						<Card text={el.text} date={el.date} key={el.id} image={el.image} />
-					</li>
-				))}
-			</ul>
+			<NewsList news={news} />
 		</section>
 	)
 }

@@ -1,0 +1,13 @@
+.employee__img {
+	width: 100% !important;
+	height: 300px !important;
+	object-fit: cover;
+}
+
+.employee__card {
+	@apply max-w-sm bg-white border rounded-xl;
+}
+
+.employee__name {
+	@apply mb-2 text-2xl font-bold text-blue;
+}
